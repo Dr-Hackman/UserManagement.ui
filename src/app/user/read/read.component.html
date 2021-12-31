@@ -1,0 +1,25 @@
+<div class="containner-fluid mt-5 col-md-8 m-auto">
+    <h2>List of users</h2><hr>
+    <table class="table table-sthiped">
+        <thead>
+            <th>#</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>email</th>
+            <th>Actions</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of usersList">
+                <td>{{user.id}}</td>
+                <td>{{user.firstName}}</td>
+                <td>{{user.lastName}}</td>
+                <td>{{user.email}}</td>
+                <td>
+                    <a class="btn btn-primary" [routerLink]="['/users/update',user.id]">Edit</a>
+                    <a class="btn btn-success" [routerLink]="['/users/show',user.id]">Details</a>
+                    <button class="btn btn-danger" (click)="deleteUser(user.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
