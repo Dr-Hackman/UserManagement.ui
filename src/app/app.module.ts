@@ -12,6 +12,7 @@ import { UpdateComponent } from './user/update/update.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiserviceService } from './apiservice.service';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { DataTablesModule } from "angular-datatables";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    DataTablesModule
   ],
   providers: [ApiserviceService],
   bootstrap: [AppComponent]

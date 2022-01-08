@@ -10,9 +10,16 @@ export class ReadComponent implements OnInit {
 
   constructor(private service:ApiserviceService) { }
 
-  usersList: any;
+  usersList: any = [];
+  dtOptions: DataTables.Settings = {};
 
   ngOnInit(): void {
+    this.dtOptions = {
+      pagingType: 'full_numbers',
+      pageLength: 5,
+      lengthMenu: [5, 10, 15, 25],
+      processing: true
+    }
     this.service.getAllUsers().subscribe((res) => {
       console.log('res==>',res);
 

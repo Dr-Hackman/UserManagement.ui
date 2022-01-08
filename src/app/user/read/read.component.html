@@ -1,12 +1,14 @@
-<div class="containner-fluid mt-5 col-md-8 m-auto">
+<div class="containner-fluid mt-5 col-md-8 m-auto" id="usersTable">
     <h2>List of users</h2><hr>
-    <table class="table table-sthiped">
+    <table datatable [dtOptions]="dtOptions" class="table table-sthiped">
         <thead>
-            <th>#</th>
-            <th>First name</th>
-            <th>Last name</th>
-            <th>email</th>
-            <th>Actions</th>
+            <tr>
+                <th>#</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>email</th>
+                <th>Actions</th>
+            </tr>
         </thead>
         <tbody>
             <tr *ngFor="let user of usersList">
